@@ -1,0 +1,11 @@
+Assumes server uses port 8080
+Assumes command line is PowerShell
+
+// to display groups of userID = 1
+curl.exe http://localhost:8080/groups/1
+
+// to create a group for userID = 1 with groupName = "MyGroup"
+curl.exe -X POST http://localhost:8080/groups/1 -H 'Content-Type: application/json' -d '{ \"groupName\": \"MyGroup\" }'
+
+// to delete a group with groupID = 1
+curl.exe -X DELETE http://localhost:8080/groups/1
